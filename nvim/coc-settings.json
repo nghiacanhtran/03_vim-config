@@ -1,0 +1,11 @@
+{
+  "eslint.packageManager": ["npm", "yarn", "pnpm"],
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "html", "jsp"],
+  "eslint.validate": ["javascript"],
+  "eslint.nodePath": "D:\\Code\\skeleton\\node_modules",
+  "eslint.nodeEnv": "D:\\Code\\skeleton\\node_modules",
+  "eslint.autoFixOnSave": true,
+  "tsserver.trace.server": "verbose",
+  "diagnostic.errorSign": "✖",
+  "diagnostic.warningSign": "⚠"
+}

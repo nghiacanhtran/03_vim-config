@@ -1,8 +1,7 @@
 {
-    "eslint.packageManager": ["npm","yarn","pnpm"],
-    "coc.preferences.formatOnSaveFiletypes": ["javascript","html"],
+    "eslint.packageManager": ["npm", "yarn", "pnpm"],
+    "coc.preferences.formatOnSaveFiletypes": ["javascript", "html"],
     "eslint.validate": ["javascript"],
-    "eslint.nodePath":"/home/nghiatran/Public/code/test/node_modules",
-    "eslint.nodeEnv":"/home/nghiatran/Public/code/test/node_modules"
-
-}	
+    "eslint.nodePath": "/home/nghiatran/Public/code/test/node_modules",
+    "eslint.nodeEnv": "/home/nghiatran/Public/code/test/node_modules"
+}
