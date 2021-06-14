@@ -4,8 +4,6 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
 Plug 'alvan/vim-closetag'
@@ -14,6 +12,10 @@ Plug 'Yggdroot/indentLine'
 Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
 Plug 'huyvohcmc/atlas.vim'
 Plug 'mhinz/vim-startify'
+Plug 'dracula/vim', { 'as': 'dracula' } 
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 
@@ -42,11 +44,13 @@ set relativenumber
 set clipboard=unnamed "allow vim copy to clipboard
 :set mouse=a          "allow mouse
 
+:set hidden
 set autoindent
 set smartindent
 
-set foldmethod=indent "folding
 set nofoldenable
+set foldmethod=indent "folding
+
 set laststatus=2 " Always display the status line
 set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --follow
 set autochdir
@@ -58,7 +62,7 @@ set tabstop=4
 set shiftwidth=4
 set shiftround
 set expandtab
-set guifont=Fira\ Code\ Retina
+set guifont=raleway
 
 " ============================================================================ "
 " ===                                UI                                    === "
@@ -108,8 +112,6 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile "prettier setting
 
-" " Border color
-let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
 " ============================================================================ "
 " ===                             KEY MAPPINGS                             === "
 " ============================================================================ "
@@ -139,35 +141,6 @@ noremap <Leader>s :update<CR>
 nnoremap <Leader>\ :vsplit<CR>
 nnoremap <Leader>/ :split<CR>
 
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
-  
-"fzf find
-noremap <C-f> :Files<CR> 
-nnoremap \ :Rg<CR>
-nnoremap <Leader>b :Buffers<cr>
-nnoremap <Leader>e :BLines<cr>
-
-
-" ripgrep command to search in multiple files
-autocmd fzf VimEnter * command! -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
-  
-" ripgrep - ignore the files defined in ignore files (.gitignore...) and doesn't ignore case
-autocmd fzf VimEnter * command! -nargs=* Rgir
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
-
-  " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
@@ -248,3 +221,12 @@ endfunction
 
 " Open terminal
 nnoremap <Leader>at :call FloatTerm()<CR>
+
+" allow paste from buffer to fzf'
+tnoremap <expr> <C-v> '<C-\><C-N>pi'
+
+" telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
