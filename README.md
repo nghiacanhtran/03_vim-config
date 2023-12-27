@@ -1,1 +1,33 @@
-# vim-config
+# Các ghi chú về Vim
+
+- Di chuyển trong Vim
+  - Để thực hiện di chuyển trong Vim, bạn cần chuyển sang chế độ command bằng phím ESC.
+    - Di chuyển sang trái: **`h`**
+    - Di chuyển sang phải: **`l`**
+    - Di chuyển lên trên một dòng: **`k`**
+    - Di chuyển xuống dưới một dòng: **`j`**
+    - Di chuyển đến đầu dòng: **`0`**
+    - Di chuyển đến cuối dòng: **`$`**
+    - Di chuyển đến một chữ cái trong dòng
+      - Trước con trỏ: `Shift + f` -> `ký tự cần nhảy`
+      - Sau con trỏ: `f` -> `ký tự cần nhảy`
+  - Nhảy n + k dòng lên trên
+    - Cách 1: `nj(10j)`
+    - Cách 2: `:+nj(:+10j)`
+  - Nhảy n + k dòng xuống dưới
+    - Cách 1: `nj(10j)`
+    - Cách 2: `:+nj(:+10j)` 
+- Tìm kiếm và thay thế
+  - Tìm kiếm
+  - Thay thế
+- Chỉnh sửa văn bản
+  - Upper case
+  - Lower case
+  - Xoá ký tự
+  - Xoá toàn bộ ký tự sau con trỏ
+  - Copy
+  - Paste
+  - Xoá một dòng
+  - Thêm một dòng mới
+  - Mutil cursor
+- Vim easymotion
