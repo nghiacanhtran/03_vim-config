@@ -49,6 +49,7 @@
     - Xoá n dòng tính từ dòng đặt con trỏ
       - Xoá dưới: `d(số dòng)j`
       - Xoá trên: `d(số dòng)k`
+    - Xóa dòng và chuyển con trỏ lên dòng trước: `d0kJx`
   - Copy,Cut
     - Chuyển sang visual mode: `v`
     - Bôi đen đoạn cần copy,cut
