@@ -49,8 +49,16 @@
     - Xoá n dòng tính từ dòng đặt con trỏ
       - Xoá dưới: `d(số dòng)j`
       - Xoá trên: `d(số dòng)k`
-  - Copy
+  - Copy,Cut
+    - Chuyển sang visual mode: `v`
+    - Bôi đen đoạn cần copy,cut
+    - Copy: `y`
+    - Cut: `d`
   - Paste
+    - Paste trước con trỏ: 'Shift P`
+    - Paste sau con trỏ: `p`
   - Thêm một dòng mới
+    - Thêm trên: 'Shift o`
+    - Thêm dưới: `o`
   - Mutil cursor
 - Vim easymotion
