@@ -16,7 +16,8 @@
     - Cách 2: `:+nj(:+10j)`
   - Nhảy n + k dòng xuống dưới
     - Cách 1: `nj(10j)`
-    - Cách 2: `:+nj(:+10j)` 
+    - Cách 2: `:+nj(:+10j)`
+  - Nhảy xuống cuối file: `Shift g`
 - Tìm kiếm và thay thế
   - Tìm kiếm:
     - Cú pháp: `\kytucantim`
