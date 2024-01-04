@@ -20,7 +20,7 @@
   - Nhảy xuống cuối file: `Shift g`
 - Tìm kiếm và thay thế
   - Tìm kiếm:
-    - Cú pháp: `\kytucantim`
+    - Cú pháp: `/kytucantim`
     - Nhảy đến từ kế tiếp: `n`
     - Nhảy đến từ đằng trước: 'N'
   - Thay thế:
