@@ -11,6 +11,7 @@
     - Di chuyển đến một chữ cái trong dòng
       - Trước con trỏ: `Shift + f` -> `ký tự cần nhảy`
       - Sau con trỏ: `f` -> `ký tự cần nhảy`
+    - Di chuyển một dòng lên hoặc xuống: `alt + j/k` 
   - Nhảy n + k dòng lên trên
     - Cách 1: `nj(10j)`
     - Cách 2: `:+nj(:+10j)`
