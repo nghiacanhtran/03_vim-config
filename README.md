@@ -84,3 +84,6 @@
 ## Vim Surround
 
 - <https://github.com/tpope/vim-surround>
+
+## Vim trong vs code
+- <https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/baby-steps-in-vim/>
