@@ -1,6 +1,8 @@
 # Thông tin thiết kế hệ thống Neovim
 
-## Kiến trúc tổng quan
+# Cấu trúc Thư Mục Cấu Hình Neovim
+
+```plaintext
 ├── init.lua              -- Điểm bắt đầu của cấu hình Neovim
 ├── lua/
 │   ├── plugins/          -- Cấu hình plugin
